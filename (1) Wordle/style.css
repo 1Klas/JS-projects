@@ -1,0 +1,170 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #223344;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffcc00;
+    color: #223344;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffdd00;
+}
+
+#keyboard {
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 10px;
+    width: 100%;
+    gap: 10px;
+}
+
+#submit {
+    background-color: #00ff3c;
+}
+
+#submit:disabled {
+    background-color: #168531;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+#wordle {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    min-width: 40%;
+    width: 40%;
+    min-height: 60%;
+    height: 60%;
+    margin-top: 20px;
+}
+
+.gridrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 15%;
+    gap: 10px;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12%;
+    height: 100%;
+    border: 1px solid #ffcc00;
+    border-radius: 5px;
+    background-color: #15181c;
+    color: #ffcc00;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+}
+
+.key {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #d5ad0c;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#validationError {
+    position: absolute;
+    padding: 20px;
+    top: 35%;
+    left: 40.5%;
+    font-size: 2.2em;
+    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+    color: #ff0000;
+    background-color: #878b8f;
+    border-radius: 15px;
+    animation: shake 1s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes shake {
+    0% { transform: translate(4px, 4px) rotate(0deg); }
+    10% { transform: translate(-4px, -8px) rotate(-1deg); }
+    20% { transform: translate(-12px, 0px) rotate(1deg); }
+    30% { transform: translate(12px, 8px) rotate(0deg); }
+    40% { transform: translate(4px, -4px) rotate(1deg); }
+    50% { transform: translate(-4px, 8px) rotate(-1deg); }
+    60% { transform: translate(-12px, 4px) rotate(0deg); }
+    70% { transform: translate(12px, 4px) rotate(-1deg); }
+    80% { transform: translate(-4px, -4px) rotate(1deg); }
+    90% { transform: translate(4px, 8px) rotate(0deg); }
+    100% { transform: translate(4px, -8px) rotate(-1deg); }
+}
+
+#result {
+    position: absolute;
+    top: 40%;
+    left: 47.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 25%;
+    min-height: 25%;
+    transform: translate(-40%, -40%);
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    color: #00ff3c;
+    background-color: #878b8f;
+    border-radius: 15px;
+}
+
+#suggestion {
+    position: absolute;
+    top: 5%;
+    left: 80%;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    color: #edf8f0;
+}
